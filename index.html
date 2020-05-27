@@ -5,8 +5,12 @@
     <title>GIT & GITHub를 이용한 회의록 만들기</title>
 
     <style>
-      body {
-        font-size: 20px;
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Nanum+Pen+Script&family=Sunflower:wght@300&display=swap');
+    body {
+      font-family: 'Nanum Gothic', sans-serif;
+      font-family: 'Nanum Pen Script', cursive;
+      font-family: 'Sunflower', sans-serif;
+      font-size: 20px;
       }
       ol {
         list-style: none;
@@ -17,12 +21,17 @@
         font-size: 40px;
         padding: 10px;
       }
-      @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Nanum+Pen+Script&family=Sunflower:wght@300&display=swap');
-      body {
-        font-family: 'Nanum Gothic', sans-serif;
-        font-family: 'Nanum Pen Script', cursive;
-        font-family: 'Sunflower', sans-serif;
-    }
+      .TextContent {
+        font-style:normal;
+        font-size: 20px;
+      }
+      .Bold {
+        font-weight: bold;
+      }
+      .Italic {
+        font-style: italic;
+      }
+
     </style>
   </head>
   <body>
@@ -38,7 +47,7 @@
         이름: 박현재<br>
         이메일 : md101106@gmail.com<br>
         번호 : 010-2941-4723<br>
-        카톡 ID : md101106 <- 혹시 디스코드 링크에 이상이 있다면 여기로 연락주세요!
+        카톡 ID : md101106 < 혹시 디스코드 링크에 이상이 있다면 여기로 연락주세요!
 
     </p>
 
@@ -52,17 +61,91 @@
     </p>
     <!--영상을 올리는 구간 -->
 
+
     <ol>
       <li>1. Git & Github는 도대체 왜 배우는 거야? 🤔</li>
+      <p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/sPJlIgW73MI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <h4>## 배우는 이유는?</h4>
+      <p>
+        <ol>
+          <li class="TextContent">1. 실수했거나, 기획이 변경되더라도 GIT을 통해 특정한 과거의 파일로 돌아갈 수 있다.</li>
+          <li class="TextContent">- 즉 conflict(내가 쓴 파일의 내용이 다른 사람의 코드 혹은 올린 코드와 겹쳤을때 뜨는 충돌 메시지) 와<br> 같은 기능 덕분에 <br>
+            문제의 원인을 빠른 시간 내로 해결이 가능하다.</li>
+          <li class="TextContent">2. GIT을 이용해서 로컬(내 컴퓨터)에 작업한 내용들을 원격저장소(Github, Bitbucket, GitLab)에<br> 올려서
+           다른 사람들과 공유하거나 다른 컴퓨터에서 작업이 가능하다.</li>
+          <li class="TextContent">3. Action 또는 Branch 를 이용한 손쉬운 개발 환경 !</li>
+          <li class="TextContent">- ex) Branch를 IOS, Android 두가지 버전으로 나눠서 어플리케이션을 개발할 수 있다.</li>
+          <li class="TextContent">- ex) Action 기능을 이용한 Build & Test 자동화가능 (Circle-CI 대체)</li>
+          <li class="TextContent">4. PR(Pull Request)를 이용해서 프로젝트 이외의 사람이 프로젝트 내용에 간섭이 가능하다!</li>
+          <li class="TextContent">- 물론 주인이 Request를 수락하면 Merge가 된다.</li>
+
+        </ol>
+      </p>
+      </p>
+
+
       <li>2. 직접 깔아보자 ! 😎</li>
+      <p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/HVzfrxrrzps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <h4>## GIT & MarkDown Editor 설치</h4>
+      <p>
+        <ol>
+          <li class="TextContent">1. 인터넷을 통해 GIT 홈페이지(<a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a>)에 들어간후 <br> 자신의 OS와 맞게 GIT을 다운해주세요.</li>
+          <li class="TextContent">2. 다운 후 GIT 설치까지 모두 끝내주세요</li>
+          <li class="TextContent">3. MarkDown 에디터로 Atom 을 다운받아주세요. (<a href="https://atom.io/" target="_blank">https://atom.io/</a>)</li>
+          <li class="TextContent">4. 마찬가지로 설치를 해주세요.</li>
+        </ol>
+      </p>
+      </p>
       <li>3. 마크다운(Markdown)을 활용한 나만의 회의록 만들기 📝</li>
+      <p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/nNh_IMDDSyM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/4koDhtT8t78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h4>## 마크다운이란 뭘까?</h4>
+      <p>
+        <ol>
+          <li class="TextContent"><span class="Bold">마크다운</span>은 웹상에서 글을쓰는 사람들을 위한 글쓰기 양식</li>
+          <li class="TextContent">"#"의 개수에 따라서 제목크기가 달라진다.-> HTML의 h1, h2, h3 와 같은 개념 ("#"이 많을수록 더 작아짐)</li>
+          <li class="TextContent">인용을 하려면 ">"기호를 사용한다.</li>
+          <li class="TextContent">테이블은 "| Content |" 형식으로 제작이 가능하다 (가운데 정렬은 "|:----:|")</li>
+          <li class="TextContent"><span class="Bold">굵게</span> 표현을 하려면 "**Content**"</li>
+          <li class="TextContent"><span class="Italic">기울어진</span> 표현을 하려면 "_Content_"</li>
+          <li class="TextContent"><span class="Bold" class="Italic">굵고 기울어진</span> 표현을 하려면 "**Content**" (또는 "___Content___")</li>
+          <li class="TextContent">링크 삽입방법 -> [1]: https://www.google.co.kr "구글" 선언 후 [구글로 이동][1] 이런식으로 사용가능하다.( 나무위키의 주석처럼 생각해면 쉽다 )</li>
+        </ol>
+      </p>
+      </p>
       <li>4. Git을 직접 이해하고 써보자 🚀</li>
+      <p>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/jfyAEnr1kyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/xJkdZ6H__28" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <h4>## Git의 요소</h4>
+      <p>
+        <ol>
+          <li class="TextContent">GIT : 로컬에서 실행되는 관리 도구 원격 저장소(Github, BitBucket, GitLab): GIT의 내용을 올릴 수 있는 저장소</li>
+          <li class="TextContent">GIT CLI : 명령어 형태로 GIT을 다룰 수 있다.(GIT의 <span class="Bold">모든 기능</span>을 사용 할 수 있다.-> 우클릭 후 git bash 를 누르면 된다. cmd, PowerShall, Terminal에서도 사용가능)</li>
+          <li class="TextContent">GIT GUI : GIT의 일부기능을 시각적으로 표현한 프로그램(Source Tree, Github Desktop 등등..)</li>
+          <li class="TextContent">CLI를 통해 GIT의 원리를 이해하면 다른 모든 GUI 프로그램을 다룰 수 있어지기 때문에 어렵더라도 CLI 기준으로 교육을 진행했다. (GUI Functions ⊂ CLI Functions)</li>
+          <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--M_fHUEqA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/128hsgntnsu9bww0y8sz.png" alt="GIT Workflow">
+          <li class="TextContent">0.원하는 원격저장소(Github, Bitbucket, Gitlab)에서 자신만의 Repository(저장소)를 만들어준다.(위 강의에서는 Github로 진행헀다)</li>
+          <li class="TextContent">1.CLI 창을 띄운 뒤 "cd"라는 명령어를 이용해서 내가 작업하고자 하는 폴더로 이동한다. GIt-Practice라는 폴더를 만들었을때 -> cd Git-Practice </li>
+          <li class="TextContent">2.원하는 폴더로 이동했으면 "git init"이라는 명령어로 내가 앞으로 작업하게 될 공간을 지정해준다.</li>
+          <li class="TextContent">3.지정이 완료됬으면 내가 생성하고자 하는 파일을 만든다.(위 강의의 목적은 마크다운을 이용한 회의록 작성이므로 회의록을 만들었음)</li>
+          <li class="TextContent">4.파일을 생성했으면 "git status"를 입력해본다. -> 그러면 창에 Untracked ~ ... 라는 말이 뜨면 정상이다.(파일이 추적(파일관리)되지 않았다는 뜻)</li>
+          <li class="TextContent">5.Untracked 된 파일을 git add <Untracked된 파일명>을 입력하거나 "git add ." 또는 "git add *.Tracked시킬 파일확장자 ex) *.c"를 입력해서 Tracked(추적)시킨다</li>
+          <li class="TextContent">6."git commit -m "입력할 커밋 메시지" "를 입력해서 키밋을 등록 시켜준다.</li>
+          <li class="TextContent">7.원격 저장소 연결을 위해 "git remote add origin <내 Repository주소>"를 입력해준다.</li>
+          <li class="TextContent">8.잘 연결되었는지 확인하기 위해서 "git remote show origin"이라고 입력해본다. (입력 후 등록한 Repository 링크가 뜬다면 성공이다.)</li>
+          <li class="TextContent">9.이제 원격저장소로 작업한 것들을 보내기 위해서 "git push origin master"을 입력해준다.</li>
+          <li class="TextContent">10. Repository에 들어간다음 내가 추가한 파일이 올라가 있으면 성공이다.</li>
+        </ol>
+      </p>
+
+      </p>
       <li>5. 깃(Git)가 막힌(?) Git에 대한 팁 ! 🔍</li>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/a4mIxRl_wkY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </ol>
@@ -72,18 +155,17 @@
       <pre>
         <code>
           <!-- 불러오기 -->
-          github에서 내 컴퓨터로 가져오기:
+          강의자료를 내 컴퓨터로 가져오기:
           git clone https://github.com/ParkHyeonJae/MeetingNote.git
         </code>
       </pre>
 
     </p>
 
-    <p>질문을 위한 디스코드 방! : <a href="https://discord.gg/gqBgBZ" target="_blank"> >디스코드 방 들어가기< </a>  </p>
+    <p>질문을 위한 디스코드 방! : <a href="https://discord.gg/6YyFT4r" target="_blank"> >디스코드 방 들어가기< </a>  </p>
     <p>열심히 준비한 강의입니다! 설문 조사 부탁드려요 🙏 </p>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfqaIVOazvJzN3cPS5firF7rFyLnQWHHJdoZmjlQa_dj-d1cQ/viewform?embedded=true"
-     width="640" height="1081" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>
-
+    width="640" height="1081" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>
    </center>
   </body>
 </html>
